@@ -1,1 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CS Les Amandiers — Centre des épreuves</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="header">
+  <div class="container nav">
+    <a class="brand" href="#">
+      <div class="logo">LA</div>
+      <div><strong>CS Les Amandiers</strong><span>Centre des épreuves</span></div>
+    </a>
+    <button id="themeBtn" class="icon-btn" aria-label="Changer le thème">🌙</button>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="container hero-content">
+    <div>
+      <span class="badge">📚 Espace pédagogique</span>
+      <h1>Les épreuves de <span>CS Les Amandiers</span></h1>
+      <p>Retrouvez facilement les devoirs, évaluations et examens du collège, classés par niveau et par matière.</p>
+      <div class="hero-actions">
+        <a href="#epreuves" class="btn primary">Explorer les épreuves</a>
+        <a href="#comment" class="btn secondary">Comment ajouter un PDF ?</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-icon">📄</div>
+      <strong id="heroCount">0</strong>
+      <span>épreuves référencées</span>
+    </div>
+  </div>
+</section>
+
+<section id="epreuves" class="container section">
+  <div class="section-head">
+    <div>
+      <span class="eyebrow">Bibliothèque</span>
+      <h2>Centre de téléchargement</h2>
+    </div>
+    <span id="resultCount" class="result-count"></span>
+  </div>
+
+  <div class="toolbar">
+    <div class="search">
+      <span>🔎</span>
+      <input id="searchInput" type="search" placeholder="Rechercher une épreuve...">
+    </div>
+    <select id="classFilter">
+      <option value="all">Toutes les classes</option>
+      <option value="6e">6e</option>
+      <option value="5e">5e</option>
+      <option value="4e">4e</option>
+      <option value="3e">3e</option>
+    </select>
+    <select id="subjectFilter">
+      <option value="all">Toutes les matières</option>
+      <option value="Francais">Français</option>
+      <option value="Mathematiques">Mathématiques</option>
+      <option value="Anglais">Anglais</option>
+      <option value="Sciences">Sciences</option>
+    </select>
+  </div>
+
+  <div id="cards" class="cards"></div>
+  <div id="empty" class="empty hidden">
+    <div>📭</div><h3>Aucune épreuve trouvée</h3><p>Essayez une autre recherche ou un autre filtre.</p>
+  </div>
+</section>
+
+<section id="comment" class="container section help">
+  <div class="help-card">
+    <div>
+      <span class="eyebrow">Administration simple</span>
+      <h2>Ajouter une nouvelle épreuve</h2>
+      <p>Déposez le fichier PDF dans le dossier correspondant, puis ajoutez une ligne dans <code>js/app.js</code>. Aucun serveur ni base de données n'est nécessaire.</p>
+    </div>
+    <div class="steps">
+      <div><b>01</b><span>Placer le PDF dans <code>epreuves/</code></span></div>
+      <div><b>02</b><span>Choisir la classe et la matière</span></div>
+      <div><b>03</b><span>Ajouter l'épreuve dans <code>examens</code></span></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <strong>CS Les Amandiers</strong>
+    <span>Centre de téléchargement des épreuves</span>
+  </div>
+</footer>
+<script src="js/app.js"></script>
+</body>
+</html>
 
